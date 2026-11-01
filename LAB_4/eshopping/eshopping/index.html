@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-SHOPPING | Cửa hàng công nghệ & Gia dụng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-nav">
+        <div class="header-container">
+            <a href="#" class="brand-logo">
+                <i class="fa-solid fa-store icon-logo"></i>
+                <span>e-SHOPPING</span>
+            </a>
+
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm sản phẩm, nhà sản xuất...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="user-actions">
+                <a href="#" class="action-item">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Tài khoản</span>
+                </a>
+                <!-- Nút mở giỏ hàng -->
+                <button class="action-item cart-btn-trigger" id="openCartBtn">
+                    <div class="cart-icon-wrap">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                    <span>Giỏ hàng</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub Header Banner -->
+    <section class="hero-banner">
+        <div class="banner-content">
+            <span class="tag">Ưu đãi độc quyền</span>
+            <h2>Khám Phá Công Nghệ Mới</h2>
+            <p>Trải nghiệm các sản phẩm chất lượng cao với mức giá tối ưu nhất.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="main-wrapper">
+        <div class="content-layout">
+            
+            <!-- Left Sidebar Categories -->
+            <aside class="sidebar">
+                <h3 class="sidebar-title"><i class="fa-solid fa-list-check"></i> Danh mục sản phẩm</h3>
+                <ul class="category-menu">
+                    <li class="active"><a href="#"><i class="fa-solid fa-border-all"></i> Tất cả sản phẩm</a></li>
+                    <li><a href="#"><i class="fa-solid fa-mobile-screen-button"></i> Điện thoại thông minh</a></li>
+                    <li><a href="#"><i class="fa-solid fa-laptop"></i> Máy tính & Laptop</a></li>
+                    <li><a href="#"><i class="fa-solid fa-plug"></i> Thiết bị gia dụng</a></li>
+                </ul>
+
+                <div class="filter-box">
+                    <h4>Mức giá</h4>
+                    <label><input type="checkbox"> Dưới 5,000,000 VNĐ</label>
+                    <label><input type="checkbox"> 5,000,000 - 15,000,000 VNĐ</label>
+                    <label><input type="checkbox"> Trên 15,000,000 VNĐ</label>
+                </div>
+            </aside>
+
+            <!-- Main Product Section -->
+            <section class="products-section">
+                <div class="section-header">
+                    <h2>Danh sách sản phẩm hiện có</h2>
+                    <div class="sort-box">
+                        <label>Sắp xếp:</label>
+                        <select>
+                            <option>Mới nhất</option>
+                            <option>Giá: Thấp đến Cao</option>
+                            <option>Giá: Cao đến Thấp</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Product Cards Grid -->
+                <div class="products-grid">
+                    
+                    <!-- Card 1 -->
+                    <div class="product-card" data-id="1" data-name="Điện thoại mẫu Flagship" data-price="8000000" data-img="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80">
+                        <div class="card-badge">Bán chạy</div>
+                        <div class="image-box">
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80" alt="Điện thoại mẫu">
+                        </div>
+                        <div class="card-body">
+                            <span class="category-tag">Điện thoại</span>
+                            <h3 class="product-title">Điện thoại mẫu Flagship</h3>
+                            
+                            <div class="meta-row">
+                                <span class="meta-item">Mã SP: <strong>1</strong></span>
+                                <span class="meta-item">NSX: <strong>ABC Tech</strong></span>
+                            </div>
+
+                            <div class="status-row">
+                                <span class="status-badge instock"><i class="fa-solid fa-check"></i> Còn hàng</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="price-container">
+                                    <span class="price-label">Giá bán:</span>
+                                    <span class="current-price">8,000,000 VNĐ</span>
+                                </div>
+                                <button class="btn-primary-add add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Thêm giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="product-card" data-id="2" data-name="Laptop Ultrabook Siêu Mỏng" data-price="15000000" data-img="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80">
+                        <div class="card-badge new-tag">Mới</div>
+                        <div class="image-box">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80" alt="Laptop mẫu">
+                        </div>
+                        <div class="card-body">
+                            <span class="category-tag">Laptop</span>
+                            <h3 class="product-title">Laptop Ultrabook Siêu Mỏng</h3>
+                            
+                            <div class="meta-row">
+                                <span class="meta-item">Mã SP: <strong>2</strong></span>
+                                <span class="meta-item">NSX: <strong>ABC Corp</strong></span>
+                            </div>
+
+                            <div class="status-row">
+                                <span class="status-badge instock"><i class="fa-solid fa-check"></i> Còn hàng</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="price-container">
+                                    <span class="price-label">Giá bán:</span>
+                                    <span class="current-price">15,000,000 VNĐ</span>
+                                </div>
+                                <button class="btn-primary-add add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Thêm giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- CART DRAWER (GIAO DIỆN GIỎ HÀNG BÊN TRỢT TỪ PHẢI SANG) -->
+    <!-- ============================================================ -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> Giỏ hàng của bạn</h3>
+            <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+        </div>
+
+        <div class="cart-body" id="cartBody">
+            <!-- Sản phẩm giỏ hàng sẽ render tự động ở đây -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Tổng tiền thanh toán:</span>
+                <span class="total-price" id="cartTotalPrice">0 VNĐ</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn"><i class="fa-solid fa-credit-card"></i> Tiến hành đặt hàng</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
