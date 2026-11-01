@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Trang-1" id="IQjOt6hFb1ZH0R3Nfo1G">
+    <mxGraphModel dx="1776" dy="983" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml\nskinparam defaultFontName \&quot;Segoe UI\&quot;\nskinparam defaultFontSize 11\n\nskinparam state {\n  BackgroundColor #FEF9C3\n  BorderColor #9F1239\n  FontColor #451A03\n  BorderThickness 1.5\n}\n\nleft to right direction\n\nstate \&quot;Đã đặt lịch\&quot; as DaDatLich {\n  entry/ lưu thông tin lịch hẹn, bác sĩ,\\nchọn khung giờ tư vấn\n}\n\nstate \&quot;Đã xác nhận\&quot; as DaXacNhan {\n  entry/ bác sĩ chấp thuận lịch khám\n}\n\nstate \&quot;Đang diễn ra\&quot; as DangDienRa {\n  do/ thực hiện video call khám trực tuyến\n}\n\nstate \&quot;Hoàn thành\&quot; as HoanThanh {\n  entry/ cập nhật kết quả và toa thuốc\n}\n\nstate \&quot;Đã hủy\&quot; as DaHuy {\n  entry/ ghi nhận hủy lịch hẹn\n}\n\n[*] --&gt; DaDatLich : BookAppointment()\\n[chọn bác sĩ, giờ trống]\n\nDaDatLich --&gt; DaXacNhan : XacNhanLich()\nDaXacNhan --&gt; DangDienRa : when(AppointmentDate)\nDangDienRa --&gt; HoanThanh : KetThucTuVan()\n\nDaDatLich --&gt; DaHuy : HuyLich()\\n[trước giờ hẹn]\n\nnote bottom of DaDatLich\n  Trạng thái lưu trong CSDL: Đã đặt lịch,\n  Đã xác nhận, Đang diễn ra,\n  Hoàn thành, Đã hủy.\nend note\n\nDaHuy --&gt; [*]\nHoanThanh --&gt; [*]\n\n@enduml&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="z1y4xTPKS42X9qJm-FQP-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10 10 10 80;fontSize=20;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Đã đặt lịch" plantUmlId="s_0" plantUmlBaseStyle="swimlane;collapsible=0;startSize=26;whiteSpace=wrap;align=center;html=1;fontSize=11;fontStyle=0;rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#FEF9C3;swimlaneFillColor=#FEF9C3;strokeColor=#9F1239;strokeWidth=1.5;fontColor=#451A03;fontFamily=Segoe UI;" plantUmlBaseValue="Đã đặt lịch" id="z1y4xTPKS42X9qJm-FQP-1108">
+          <mxCell parent="z1y4xTPKS42X9qJm-FQP-1" style="swimlane;collapsible=0;startSize=26;whiteSpace=wrap;align=center;html=1;fontSize=11;fontStyle=0;rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#FEF9C3;swimlaneFillColor=#FEF9C3;strokeColor=#9F1239;strokeWidth=1.5;fontColor=#451A03;fontFamily=Segoe UI;" vertex="1">
+            <mxGeometry height="50" width="94" x="377.70000000000005" y="216" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Đã xác nhận" plantUmlId="s_1" plantUmlBaseStyle="swimlane;collapsible=0;startSize=26;whiteSpace=wrap;align=center;html=1;fontSize=11;fontStyle=0;rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#FEF9C3;swimlaneFillColor=#FEF9C3;strokeColor=#9F1239;strokeWidth=1.5;fontColor=#451A03;fontFamily=Segoe UI;" plantUmlBaseValue="Đã xác nhận" id="z1y4xTPKS42X9qJm-FQP-1109">
+          <mxCell parent="z1y4xTPKS42X9qJm-FQP-1" style="swimlane;collapsible=0;startSize=26;whiteSpace=wrap;align=center;html=1;fontSize=11;fontStyle=0;rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#FEF9C3;swimlaneFillColor=#FEF9C3;strokeColor=#9F1239;strokeWidth=1.5;fontColor=#451A03;fontFamily=Segoe UI;" vertex="1">
+            <mxGeometry height="50" width="103" x="234.07000000000005" y="320" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Đang diễn ra" plantUmlId="s_2" plantUmlBaseStyle="swimlane;collapsible=0;startSize=26;whiteSpace=wrap;align=center;html=1;fontSize=11;fontStyle=0;rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#FEF9C3;swimlaneFillColor=#FEF9C3;strokeColor=#9F1239;strokeWidth=1.5;fontColor=#451A03;fontFamily=Segoe UI;" plantUmlBaseValue="Đang diễn ra" id="z1y4xTPKS42X9qJm-FQP-1110">
+          <mxCell parent="z1y4xTPKS42X9qJm-FQP-1" style="swimlane;collapsible=0;startSize=26;whiteSpace=wrap;align=center;html=1;fontSize=11;fontStyle=0;rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#FEF9C3;swimlaneFillColor=#FEF9C3;strokeColor=#9F1239;strokeWidth=1.5;fontColor=#451A03;fontFamily=Segoe UI;" vertex="1">
+            <mxGeometry height="50" width="105" x="230.00000000000006" y="470" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Hoàn thành" plantUmlId="s_3" plantUmlBaseStyle="swimlane;collapsible=0;startSize=26;whiteSpace=wrap;align=center;html=1;fontSize=11;fontStyle=0;rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#FEF9C3;swimlaneFillColor=#FEF9C3;strokeColor=#9F1239;strokeWidth=1.5;fontColor=#451A03;fontFamily=Segoe UI;" plantUmlBaseValue="Hoàn thành" id="z1y4xTPKS42X9qJm-FQP-1111">
+          <mxCell parent="z1y4xTPKS42X9qJm-FQP-1" style="swimlane;collapsible=0;startSize=26;whiteSpace=wrap;align=center;html=1;fontSize=11;fontStyle=0;rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#FEF9C3;swimlaneFillColor=#FEF9C3;strokeColor=#9F1239;strokeWidth=1.5;fontColor=#451A03;fontFamily=Segoe UI;" vertex="1">
+            <mxGeometry height="50" width="100" x="230.00000000000006" y="640" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Đã hủy" plantUmlId="s_4" plantUmlBaseStyle="swimlane;collapsible=0;startSize=26;whiteSpace=wrap;align=center;html=1;fontSize=11;fontStyle=0;rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#FEF9C3;swimlaneFillColor=#FEF9C3;strokeColor=#9F1239;strokeWidth=1.5;fontColor=#451A03;fontFamily=Segoe UI;" plantUmlBaseValue="Đã hủy" id="z1y4xTPKS42X9qJm-FQP-1112">
+          <mxCell parent="z1y4xTPKS42X9qJm-FQP-1" style="swimlane;collapsible=0;startSize=26;whiteSpace=wrap;align=center;html=1;fontSize=11;fontStyle=0;rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#FEF9C3;swimlaneFillColor=#FEF9C3;strokeColor=#9F1239;strokeWidth=1.5;fontColor=#451A03;fontFamily=Segoe UI;" vertex="1">
+            <mxGeometry height="50" width="65" x="490" y="320" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="s_5" plantUmlBaseStyle="ellipse;fillColor=#222222;strokeColor=#222222;fontSize=11;fontFamily=Segoe UI;" plantUmlBaseValue="" id="z1y4xTPKS42X9qJm-FQP-1113">
+          <mxCell parent="z1y4xTPKS42X9qJm-FQP-1" style="ellipse;fillColor=#222222;strokeColor=#222222;fontSize=11;fontFamily=Segoe UI;" vertex="1">
+            <mxGeometry height="20" width="20" x="414.70000000000005" y="120" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="s_6" plantUmlBaseStyle="shape=endState;fillColor=#222222;strokeColor=#222222;fontSize=11;fontFamily=Segoe UI;" plantUmlBaseValue="" id="z1y4xTPKS42X9qJm-FQP-1114">
+          <mxCell parent="z1y4xTPKS42X9qJm-FQP-1" style="shape=endState;fillColor=#222222;strokeColor=#222222;fontSize=11;fontFamily=Segoe UI;" vertex="1">
+            <mxGeometry height="24" width="24" x="510.5" y="653" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="BookAppointment()&#xa;[chọn bác sĩ, giờ trống]" plantUmlId="t_7" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;labelPosition=right;align=left;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="BookAppointment()&#xa;[chọn bác sĩ, giờ trống]" id="z1y4xTPKS42X9qJm-FQP-1115">
+          <mxCell edge="1" parent="z1y4xTPKS42X9qJm-FQP-1" source="z1y4xTPKS42X9qJm-FQP-1113" style="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;labelPosition=right;align=left;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="z1y4xTPKS42X9qJm-FQP-1108">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="424.70000000000005" y="140" as="sourcePoint" />
+              <mxPoint x="424.70000000000005" y="216" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="XacNhanLich()" plantUmlId="t_8" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="XacNhanLich()" id="z1y4xTPKS42X9qJm-FQP-1116">
+          <mxCell edge="1" parent="z1y4xTPKS42X9qJm-FQP-1" source="z1y4xTPKS42X9qJm-FQP-1108" style="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="z1y4xTPKS42X9qJm-FQP-1109">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="409.03000000000003" y="266" as="sourcePoint" />
+              <mxPoint x="409.64000000000004" y="360.82" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="when(AppointmentDate)" plantUmlId="t_9" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;labelPosition=right;align=left;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="when(AppointmentDate)" id="z1y4xTPKS42X9qJm-FQP-1117">
+          <mxCell edge="1" parent="z1y4xTPKS42X9qJm-FQP-1" source="z1y4xTPKS42X9qJm-FQP-1109" style="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;labelPosition=right;align=left;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="z1y4xTPKS42X9qJm-FQP-1110">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="409.64000000000004" y="410.82" as="sourcePoint" />
+              <mxPoint x="389.57000000000005" y="525.5" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="KetThucTuVan()" plantUmlId="t_10" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;labelPosition=right;align=left;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="KetThucTuVan()" id="z1y4xTPKS42X9qJm-FQP-1118">
+          <mxCell edge="1" parent="z1y4xTPKS42X9qJm-FQP-1" source="z1y4xTPKS42X9qJm-FQP-1110" style="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;labelPosition=right;align=left;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="z1y4xTPKS42X9qJm-FQP-1111">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="389.57000000000005" y="575.5" as="sourcePoint" />
+              <mxPoint x="370" y="670.75" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="HuyLich()&#xa;[trước giờ hẹn]" plantUmlId="t_11" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="HuyLich()&#xa;[trước giờ hẹn]" id="z1y4xTPKS42X9qJm-FQP-1119">
+          <mxCell edge="1" parent="z1y4xTPKS42X9qJm-FQP-1" source="z1y4xTPKS42X9qJm-FQP-1108" style="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="z1y4xTPKS42X9qJm-FQP-1112">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="440.36" y="266" as="sourcePoint" />
+              <mxPoint x="500.44000000000005" y="440.82" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="t_12" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="z1y4xTPKS42X9qJm-FQP-1120">
+          <mxCell edge="1" parent="z1y4xTPKS42X9qJm-FQP-1" source="z1y4xTPKS42X9qJm-FQP-1112" style="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;curved=1;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="z1y4xTPKS42X9qJm-FQP-1114">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="500.44000000000005" y="490.82" as="sourcePoint" />
+              <mxPoint x="437.5" y="795.64" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="t_13" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="z1y4xTPKS42X9qJm-FQP-1121">
+          <mxCell edge="1" parent="z1y4xTPKS42X9qJm-FQP-1" source="z1y4xTPKS42X9qJm-FQP-1111" style="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=11;html=1;rounded=0;fontFamily=Segoe UI;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="z1y4xTPKS42X9qJm-FQP-1114">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
